@@ -1,0 +1,56 @@
+.jogo {
+    width: 600px;
+    height: 250px;
+    margin: auto;
+    background-image: url("/JS/AULA_30_jogo/imgs/fundo.png");
+}
+
+#carro {
+    width: 100px;
+    height: 100px;
+    background-image: url("/JS/AULA_30_jogo/imgs/carro.png");
+    background-size: 100px 100px;
+    position: relative;
+    top: 150px;
+}
+
+.pula {
+    animation: pula 0.4s linear;
+}
+
+@keyframes pula {
+    
+    0% {
+        top: 150px;
+    }
+
+    50% {
+        top: 50px;
+    }
+
+    100% {
+        top: 150px
+    }
+}
+
+#obstaculo {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    top: 110px;
+    background-image: url("/JS/AULA_30_jogo/imgs/obstaculo.png");
+    background-size: 60px 30px;
+
+    animation: block 1.2s infinite linear;
+}
+
+@keyframes block {
+
+    0% {
+        left: 590px;
+    }
+
+    100% {
+        left: -20px;
+    }
+}

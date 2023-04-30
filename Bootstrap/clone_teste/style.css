@@ -1,0 +1,15 @@
+.rounded-pill:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+    background: transparent;
+}
+
+.capa {
+    width: 240px;
+    height: 160px;
+}
+
+.capa:hover {
+    transform: scale(1.2);
+    transition: transform 0.3;
+}

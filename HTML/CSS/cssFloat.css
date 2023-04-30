@@ -1,0 +1,21 @@
+.flutuante {
+    border: 1px solid red;
+    background-color: rgb(42, 130, 165);
+    color: white;
+    width: 200px;
+    padding: 10px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+}
+
+.flutuante_2 {
+    border: 1px solid blue ;
+    background-color: chartreuse;
+    color: red;
+    width: 200px;
+    padding: 10px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+}
