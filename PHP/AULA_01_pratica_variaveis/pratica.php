@@ -14,9 +14,25 @@
 
     /* Comenta varias linhas */
 
+    //Variáveis são case sensitive
     $resposta_expressao = 5 + 15 + 6;
-    echo ($resposta_expressao);
+    echo ("<br>$resposta_expressao"); // Mais recomendada
 
+    ECHO ("<br>$resposta_expressao");
+    EcHo ("<br>$resposta_expressao");
+     $CarlosAlberto = 5 + 5;
+
+     $valorFloat = 12.0; // Float
+     $valorInt = 8; // Inteiro
+     $nomePessoa = "Carlos Alberto"; // String
+
+     $salario_funcionario = 1200.00;
+     $notaAluno = 12.90;
+     print("<br> salário do funcionário é $salario_funcionario");
+     print("<br nota do aluno é $notaAluno pontos");
+     print('<br> Exemplo de string com aspas simples' .  $notaAluno); //Exemplo aspas simples
+
+    
 
 ?>
 </body>
