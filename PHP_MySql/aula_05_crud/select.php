@@ -4,20 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <title>Lista de produtos cadastrados</title>
-  <style>
-
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      padding: 10px;
-    }
-
-    table {
-      width: 90%;
-    }
-
-  </style>
+ 
 </head>
 <body>
   <h2>Lista de produtos cadastrados</h2>
@@ -32,7 +22,7 @@
     if($dadosProdutos->num_rows > 0) {
   ?>
 
-  <table>
+  <table class="table table-striped">
     <tr>
       <th>Id</th>
       <th>Nome do produto</th>
