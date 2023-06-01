@@ -13,7 +13,7 @@
   <h2>Lista de produtos cadastrados</h2>
   <?php 
     //Incorporando o arquivo de conexão
-    include_once("aula.php");
+    include_once("conexao.php");
     //Definindo a string com o comando sql
     $sql = "SELECT * FROM tbprodutos ORDER BY nmProduto";
     //Executando o comando sql
@@ -28,6 +28,8 @@
       <th>Nome do produto</th>
       <th>Categoria do produto</th>
       <th>Descrição do produto</th>
+      <th>Editar</th>
+      <th>Excluir</th>
     </tr>
   
 <?php
@@ -47,6 +49,9 @@
       
       <td><?php echo ($exibirCatergoria["nmCategoria"]); ?> </td>
       <td><?php echo ($exibir["descProduto"]); ?> </td>
+      
+      <td><a href="">Editar</a></td>
+      <td><a href="">Excluir</a></td>
     </tr>      
 
 
