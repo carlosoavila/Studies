@@ -1,7 +1,7 @@
 <?php 
-    include_once("conexao.php");
+    include_once("aula.php");
 
-    $idProduto = 3;
+    $idProduto = $_GET["idProduto"];
 
     $sql = "DELETE FROM tbprodutos WHERE idProduto = $idProduto";
 

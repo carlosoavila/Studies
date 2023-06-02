@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+ <script>
+    function confirmarExclusao(id, prod) {
+      if(window.confirm("Deseja relamente excluir o registro? \n" + id + " - " + prod + "\n\n???")) {
+        window.location = "excluirProduto.php?idProduto="+id;
+      }
+    }
+
+
+  
+  </script>
   <title>Lista de produtos cadastrados</title>
  
 </head>
@@ -13,7 +24,7 @@
   <h2>Lista de produtos cadastrados</h2>
   <?php 
     //Incorporando o arquivo de conexão
-    include_once("conexao.php");
+    include_once("aula.php");
     //Definindo a string com o comando sql
     $sql = "SELECT * FROM tbprodutos ORDER BY nmProduto";
     //Executando o comando sql
@@ -51,7 +62,8 @@
       <td><?php echo ($exibir["descProduto"]); ?> </td>
       
       <td><a href="">Editar</a></td>
-      <td><a href="">Excluir</a></td>
+
+      <td><a href="#" onclick="confirmarExclusao(<?php echo ($exibir['idProduto']); ?>, '<?php echo ($exibir['nmProduto']); ?>')">Excluir</a></td>
     </tr>      
 
 
