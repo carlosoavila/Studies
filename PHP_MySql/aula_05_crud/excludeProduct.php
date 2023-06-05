@@ -1,5 +1,5 @@
 <?php 
-    include_once("aula.php");
+    include_once("conexao.php");
 
     $idProduto = $_GET["idProduto"];
 

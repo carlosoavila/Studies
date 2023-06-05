@@ -15,7 +15,7 @@
 
     <script>
         alert("Registro salvo com sucesso");
-        window.location = "bemVindo.php"; //Volta para a tela anterior
+        window.location = "select.php"; //Volta para a tela anterior
     </script>    
 
 <?php        

@@ -22,9 +22,11 @@
 </head>
 <body>
   <h2>Lista de produtos cadastrados</h2>
-  <?php 
+  <a href="newProduct.php" style="text-decoration: none;"> Adicionar produto</a>
+  
+  <?php                                                                                 
     //Incorporando o arquivo de conexão
-    include_once("aula.php");
+    include_once("conexao.php");
     //Definindo a string com o comando sql
     $sql = "SELECT * FROM tbprodutos ORDER BY nmProduto";
     //Executando o comando sql
@@ -61,7 +63,7 @@
       <td><?php echo ($exibirCatergoria["nmCategoria"]); ?> </td>
       <td><?php echo ($exibir["descProduto"]); ?> </td>
       
-      <td><a href="">Editar</a></td>
+      <td><a href="editProduct.php?idProduto=<?php echo ($exibir["idProduto"]);?>">Editar</a></td>
 
       <td><a href="#" onclick="confirmarExclusao(<?php echo ($exibir['idProduto']); ?>, '<?php echo ($exibir['nmProduto']); ?>')">Excluir</a></td>
     </tr>      

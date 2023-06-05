@@ -13,7 +13,7 @@ include_once("conexao.php");
 </head>
 <body>
     <h2>Cadastro de Produtos</h2>
-    <form action="inderirProduto.php" method="post">
+    <form action="inserirProduto.php" method="post">
         <label for="txtProduto">Nome do Produto: </label>
         <br>
         <input type="text" name="txtProduto" id="txtProduto" required autofocus placeholder="Nome do Produto">
