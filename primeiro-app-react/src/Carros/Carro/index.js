@@ -2,7 +2,10 @@ import React from "react";
 import ImgRedonda from "../../Global/ImgRedonda";
 import { Fragment } from "react";
 
+
 const Carro = (props) => {
+
+    
 
     const propriedades = ['Revisão anual', 'Manual de fábrica', 'Pintura original']
     const listaPropriedades = propriedades.map((n, index) => 
@@ -15,6 +18,8 @@ const Carro = (props) => {
         
                 <Fragment>
         
+     
+
                     <h3>{props.titulo}</h3>
                     
                     <p>{props.descricao}</p>
