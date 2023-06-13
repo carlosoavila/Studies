@@ -1,10 +1,34 @@
 import Carros from './Carros';
 import './App.css';
+import {
 
-function App() {
+  BrowserRouter as Router,
+  useRoutes,
+
+} from "react-router-dom"
+
+const Sobre = () => {
   return (
-    <Carros></Carros>
-  );
+    <h1>Essa é a página Sobre</h1>
+
+  )
 }
 
-export default App;
+const App = () => {
+  let routes = useRoutes ([
+    {path:"/", element:<Carros/>},
+    {path:"Sobre", element:<Sobre/>},
+  ]);
+
+  return routes;
+};
+
+const appWrapper =() => {
+  return (
+    <Router>
+      <App/>
+    </Router>  
+    )
+}
+
+export default appWrapper;
