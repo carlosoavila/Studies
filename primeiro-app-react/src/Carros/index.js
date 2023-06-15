@@ -1,7 +1,9 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Carro from './Carro';
 import { Fragment } from "react";
 import Formulario from "./Form";
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 const MostraMensagem = () => {
     alert("O criador do sistema é o Carlos!")
@@ -27,30 +29,35 @@ const Carros = () => {
     }
 
     useEffect(() => {
-        getCarros().then (dados => {
+        getCarros().then(dados => {
             setCarros(dados['carros'])
-    })
+        })
 
-}, [])
+    }, [])
 
 
     const addCarro = (novo_carros) => {
-        setCarros ([...carros, novo_carros])
+        setCarros([...carros, novo_carros])
     }
 
     return (
         <Fragment>
 
             <h2>Carro</h2>
-            <button onClick={MostraMensagem}>Criador do sistema</button>
-            <button onClick={removerUltimo}>Remover Último</button>
+
+            <ButtonGroup aria-label="Basic example">
+                <Button onClick={MostraMensagem} variant="secondary">Mostrar Desenvolvedores</Button>
+                <Button onClick={removerUltimo} variant="danger">Remover Último</Button>
+            </ButtonGroup>
+
             <hr></hr>
+
             <Formulario addCarro={addCarro}></Formulario>
 
             {carros.map((carro) =>
 
                 <Carro
-
+                    id={carro.id}
                     titulo={carro.titulo}
                     descricao={carro.descricao}
                     img={carro.img}
